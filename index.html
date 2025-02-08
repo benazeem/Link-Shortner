@@ -2,38 +2,52 @@
 <html lang="en">
   <head>
     <title>Shortly (Link Shortner App)</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Shortly - A simple and efficient link shortener application" >
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Shortly - A simple and efficient link shortener application"
+    />
     <link rel="stylesheet" href="mobile-first-styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header class="header ">
+    <header class="header">
       <div class="header-logo">
-        <img src="/images/logo.svg" alt="">
+        <img src="images/logo.svg" alt="" />
       </div>
-      <button type="menu" class="hamburger" onclick="myFunction()" aria-label="Toggle menu"><img id="hamburger-icon" src="/images/icon-hamburger.svg" alt="hamburger icon"> </button>
- 
-      <div class="header-menu hidden" id="h-menu"> 
+      <button
+        type="menu"
+        class="hamburger"
+        onclick="toggleMenu()"
+        aria-label="Toggle menu"
+      >
+        <img
+          id="hamburger-icon"
+          src="/images/icon-hamburger.svg"
+          alt="hamburger icon"
+        />
+      </button>
+
+      <div class="header-menu hidden" id="h-menu">
         <nav class="header-nav">
-         <a href="#">Features</a>
+          <a href="#">Features</a>
           <a href="#">Pricing</a>
           <a href="#">Resources</a>
         </nav>
-       <div class="header-authentication">
-        <a href="#"> Login </a>
-        <button type="button">Sign Up</button>
+        <div class="header-authentication">
+          <a href="#"> Login </a>
+          <button type="button">Sign Up</button>
+        </div>
       </div>
-    </div>
     </header>
     <section>
-      <div class="section-hero ">
-        <img
-          src="/images/illustration-working.svg"
-          alt="illustration-working"
-        />
+      <div class="section-hero">
+        <img src="images/illustration-working.svg" alt="illustration-working" />
         <div class="hero-text-content">
           <h1>More than just shorter links</h1>
           <p>
@@ -42,106 +56,140 @@
           </p>
           <button type="button">Get Started</button>
         </div>
-       
       </div>
       <div class="section-shorten">
         <div class="section-shorten-container">
-          <form class="shorten-form">
-            <input type="text" placeholder="Shorten a link here..." />
+          <form class="shorten-form" onsubmit="formSubmit(event)">
+            <input type="url" required placeholder="Shorten a link here..." />
             <button type="submit">Shorten It!</button>
           </form>
         </div>
       </div>
-      <div class="section-statistics ">
+      <div class="section-statistics">
         <div class="statistics-info">
-        <h2>Advanced Statistics</h2>
-        <p>
-          Track how your links are performing across the web with our advanced
-          statistics dashboard.
-        </p>
-      </div>
+          <h2>Advanced Statistics</h2>
+          <p>
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
+          </p>
+        </div>
         <div class="statistics-cards">
           <div class="statistics-card card-1">
             <div class="card-icon">
-                <img
-                  src="images/icon-brand-recognition.svg"
-                  alt="brand-recognition"
-                />
-              </div>
+              <img
+                src="images/icon-brand-recognition.svg"
+                alt="brand-recognition"
+              />
+            </div>
             <div class="card-info">
-            <h3>Brand Recognition</h3>
-            <p>
-              Boost your brand recognition with each click. Generic links don't
-              mean a thing. Branded links help instil confidence in your
-              content.
-            </p>
-          </div></div>
+              <h3>Brand Recognition</h3>
+              <p>
+                Boost your brand recognition with each click. Generic links
+                don't mean a thing. Branded links help instil confidence in your
+                content.
+              </p>
+            </div>
+          </div>
           <div class="statistics-card card-2">
             <div class="card-icon">
-                <img
-                  src="images/icon-detailed-records.svg"
-                  alt="detailed-records"
-                />
+              <img
+                src="images/icon-detailed-records.svg"
+                alt="detailed-records"
+              />
             </div>
             <div class="card-info">
-            <h3>Detailed Records</h3>
-            <p>
-              Gain insights into who is clicking your links. Knowing when and
-              where people engage with your content helps inform better
-              decisions.
-            </p>
-          </div></div>
+              <h3>Detailed Records</h3>
+              <p>
+                Gain insights into who is clicking your links. Knowing when and
+                where people engage with your content helps inform better
+                decisions.
+              </p>
+            </div>
+          </div>
           <div class="statistics-card card-3">
             <div class="card-icon">
-                <img
-                  src="images/icon-fully-customizable.svg"
-                  alt="fully-customizable"
-                />
+              <img
+                src="images/icon-fully-customizable.svg"
+                alt="fully-customizable"
+              />
             </div>
             <div class="card-info">
-            <h3>Fully Customizable</h3>
-            <p>
-              Improve brand awareness and content discoverability through
-              customizable links, supercharging audience engagement.
-            </p>
-          </div></div>
+              <h3>Fully Customizable</h3>
+              <p>
+                Improve brand awareness and content discoverability through
+                customizable links, supercharging audience engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="popup">
+      <div class="popup-container" id="popup-container">
+        <div id="popup-loader">
+          <img id="loading-image" src="images/loader.svg" alt="Loading..." />
+        </div>
+        <div class="close-popup" onclick="closePopup()">
+          <img src="images/icon-close.svg" alt="close popup" />
+        </div>
+        <div class="url-response-container">
+          <div class="url-response-original">
+            <p id="original-url">https://www.example.com</p>
+          </div>
+          <div class="url-response-shortened">
+            <p id="shortened-url">https://short.ly/abcdegdvashjvf</p>
+            <button type="button" onclick="copytoClipboard()">Copy</button>
+          </div>
+        </div>
+        <div id="error-container">
+          <p id="error-text">sbdhbsj</p>
         </div>
       </div>
     </section>
     <footer>
-      <div class="footer-top ">
+      <div class="footer-top">
         <h2>Boost your links today</h2>
-        <button type="button" >Get Started</button>
+        <button type="button">Get Started</button>
       </div>
       <div class="footer-bottom">
-        <img src="/images/footer-logo.svg" alt="Fotter logo" />
-       
-       <div class="bottom-content"> <div class="footer-links">
-          <h3>Features</h3>
-          <a href="#">Link Shortening</a>
-          <a href="#">Branded Links</a>
-          <a href="#">Analytics</a>
+        <img src="images/footer-logo.svg" alt="Fotter logo" />
+
+        <div class="bottom-content">
+          <div class="footer-links">
+            <h3>Features</h3>
+            <a href="#">Link Shortening</a>
+            <a href="#">Branded Links</a>
+            <a href="#">Analytics</a>
+          </div>
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <a href="#">Blog</a>
+            <a href="#">Developers</a>
+            <a href="#">Support</a>
+          </div>
+          <div class="footer-links">
+            <h3>Company</h3>
+            <a href="#">About</a>
+            <a href="#">Our Team</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="images/icon-facebook.svg" alt="facebook" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+              <img src="images/icon-twitter.svg" alt="twitter" />
+            </a>
+            <a href="https://www.pinterest.com" target="_blank">
+              <img src="images/icon-pinterest.svg" alt="pinterest" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="images/icon-instagram.svg" alt="instagram" />
+            </a>
+          </div>
         </div>
-        <div class="footer-links">
-          <h3>Resources</h3>
-          <a href="#">Blog</a>
-          <a href="#">Developers</a>
-          <a href="#">Support</a>
-        </div>
-        <div class="footer-links">
-          <h3>Company</h3>
-          <a href="#">About</a>
-          <a href="#">Our Team</a>
-          <a href="#">Careers</a>
-          <a href="#">Contact</a>
-        </div>
-        <div class="footer-social">
-         <a href="https://www.facebook.com" target="_blank"> <img src="images/icon-facebook.svg" alt="facebook" /> </a>
-         <a href="https://www.twitter.com" target="_blank"> <img src="images/icon-twitter.svg" alt="twitter" /> </a>
-         <a href="https://www.pinterest.com" target="_blank"> <img src="images/icon-pinterest.svg" alt="pinterest" /> </a>
-         <a href="https://www.instagram.com" target="_blank">   <img src="images/icon-instagram.svg" alt="instagram" /> </a>
-        </div>
-      </div></div>
+      </div>
     </footer>
     <script src="services.js"></script>
   </body>
